@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ea5959;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.todo {
+  padding: 32px;
+  background-color: #fff;
+  width: 90vh;
+  border-radius: 20px;
+}
+
+.todo__title {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.todo__content {
+}
+
+.todo__new {
+  display: flex;
+  margin: 16px 0px 32px;
+}
+
+.todo__new input {
+  margin-right: 16px;
+  font-size: 18px;
+  padding: 8px 16px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.todo__add,
+.todo__task-del {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 49px;
+  font-size: 32px;
+  font-weight: 300;
+  border-radius: 50%;
+  background-color: #ea5959;
+  color: white;
+  cursor: pointer;
+}
+
+.todo__list > *:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.todo__task {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  cursor: default;
+}
+
+.todo__checkbox {
+  margin-right: 16px;
+}
+
+.todo__checkbox input {
+  display: none;
+}
+
+.todo__checkbox input:checked + div {
+    background-color: #ea5959;
+}
+
+.todo__checkbox input:checked + div::after {
+    display: block;
+}
+
+.todo__task_complete .todo__task-text {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.todo__checkbox div {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ea5959;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.todo__checkbox div::after {
+    content: '\1F5F8';
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.todo__task-text {
+  font-size: 20px;
+}
+
+.todo__task-del {
+  display: none;
+  margin-left: auto;
+  margin-right: 0;
+  height: 36px;
+  width: 36px;
+  line-height: 29px;
+  font-size: 44px;
+}
+
+.todo__task:hover .todo__task-del {
+  display: block;
+}
+
+.todo__tasks-count {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo__tasks-clear-all {
+    cursor: pointer;
+}
+
+.count {
+    font-weight: 600;
+}
